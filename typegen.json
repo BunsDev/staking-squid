@@ -1,0 +1,18 @@
+{
+  "outDir": "src/types",
+  "specVersions": "https://polkadot.archive.subsquid.io/graphql",
+  "events": [
+    "Staking.Rewarded",
+    "Staking.Slashed",
+    "Staking.Bonded",
+    "Grandpa.NewAuthorities"
+  ],
+  "calls": [
+  ],
+  "storage": [
+    "Session.Validators",
+    "Staking.ErasStakers",
+    "Staking.ErasValidatorPrefs",
+    "Staking.ActiveEra"
+  ]
+}

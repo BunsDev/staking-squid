@@ -1,0 +1,51 @@
+type Era @entity {
+  id: ID!
+  startAtTime: BigInt! @index
+  startAtBlock: Int! @index
+}
+
+
+type ErasStakers @entity{
+  id: ID!
+  eraId: Int! @index
+  validator: String! @index
+  selfBonded: BigInt!
+  totalBonded: BigInt!
+  nominatorCount: Int
+  commission: Int
+}
+
+type EraNominations @entity{
+  id: ID!
+  eraId: Int! @index
+  validator: String! @index
+  nominator: String! @index
+  vote: BigInt
+}
+
+type Rewarded @entity{
+  id: ID!
+  blockNumber: Int! @index
+  timestamp: DateTime! @index
+  extrinsicHash: String @index
+  stash: String! @index
+  amount: BigInt
+
+}
+
+type Slashed @entity{
+  id: ID!
+  blockNumber: Int! @index
+  timestamp: DateTime! @index
+  staker: String! @index
+  amount: BigInt
+}
+
+type Bonded @entity {
+  id: ID!,
+  blockNumber: Int! @index,
+  timestamp: DateTime! @index,
+  extrinsicHash: String @index,
+  stash: String!@index,
+  amount: BigInt
+}
